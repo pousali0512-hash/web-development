@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url(3.jpg);
+            background-size: cover;
+        }
+
+        #main {
+            height: 50vh;
+            width: 60vw;
+            background-color: antiquewhite;
+            margin-top: 25vh;
+            margin-left: 20vw;
+            background-image: url(1.jpg);
+            background-size: cover;
+            background-position-y: 11%;
+            border-radius: 5px;
+            opacity: 91%;
+        }
+
+        #left {
+            height: 50vh;
+            width: 60%;
+            float: left;
+
+        }
+
+        #right {
+            height: 50vh;
+            width: 40%;
+            float: left;
+        }
+
+        #circle {
+            height: 130px;
+            width: 130px;
+            background-color: transparent;
+
+            border-radius: 50%;
+            margin-left: 8.5vw;
+            margin-top: -8vh;
+
+        }
+
+
+        #formcss {
+            height: 30vh;
+            width: 20vw;
+            /* background-color: rgb(83, 88, 87); */
+            margin-left: 1.8vw;
+            margin-top: 7vh;
+        }
+
+        p {
+            color: white;
+            font-family: sans-serif;
+        }
+
+        input {
+            background-color: transparent;
+            width: 100%;
+            border: none;
+            /* Remove All Side Borders */
+
+            /* For Bottom Line - We are adding this */
+            border-bottom: 1px;
+            border-bottom-color: white;
+            border-bottom-style: solid;
+
+        }
+
+
+
+
+        /* CSS */
+        .button-85 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin-left: 37%;
+            margin-top: 10%;
+        }
+
+        .button-85:before {
+            content: "";
+            background: linear-gradient(45deg,
+                    #ff0000,
+                    #ff7300,
+                    #fffb00,
+                    #48ff00,
+                    #00ffd5,
+                    #002bff,
+                    #7a00ff,
+                    #ff00c8,
+                    #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        #BrandName {
+            color: white;
+            font-size: 4vh;
+            font-family: sans-serif;
+            margin-left: 10%;
+            margin-top: 10%;
+            font-weight: 700;
+            
+        }
+        #abc{
+                margin-left: 10%;
+    margin-top: 0%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="left">
+            <div id="BrandName">The<br>North Face</div>
+            <p id="abc">Take the bag and start the travel.</p>
+        </div>
+        <div id="right">
+            <div id="circle"></div>
+
+
+            <div id="formcss">
+                <form>
+                    <p>Enter your mail:</p>
+                    <input type="mail" id="mail" name="mail"><br>
+                    <p>Enter your password:</p>
+                    <input type="password" id="password" name="password"><br>
+                    <button type="submit" value="Login" name="Login" class="button-85">Login</button>
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+    
+</body>
+</html>
